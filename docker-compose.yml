@@ -2,7 +2,7 @@ version: "3"
 
 services:
   php:
-    image: sugenk/php5.6-fpm-alpine:arm64
+    image: kalabamba/php56-fpm:latest
     volumes:
       - /home/ubuntu/docker-test/src/:/var/www/html
   nginx:
