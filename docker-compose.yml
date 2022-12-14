@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "25680:80"
+    volumes:
+      - ./src/:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  php:
+    image: sugenk/php5.6-fpm-alpine
+    volumes:
+      - ./src/:/var/www/html
