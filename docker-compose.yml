@@ -4,7 +4,7 @@ services:
   php:
     image: sugenk/php5.6-fpm-alpine:arm64
     volumes:
-      - /src/:/var/www/html
+      - /home/ubuntu/docker-test/src/:/var/www/html
   nginx:
     image: nginx:latest
     ports:
